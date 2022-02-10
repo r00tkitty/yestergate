@@ -22,7 +22,6 @@ namespace browser
 
         private void Form1_Load(object sender, EventArgs e)
         {
-      
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -122,7 +121,10 @@ namespace browser
 
         private void buttonMaximize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
